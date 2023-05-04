@@ -196,13 +196,21 @@ def main():
     , unsafe_allow_html=True)
 
     # You can customize the footer content here
-    st.markdown(
-        """
-        <div class="footer">
-            Created by: Arnante, Besa, Estallo - BSCS 3A
-        </div>
-        """
-    , unsafe_allow_html=True)
+   # Set the footer text
+footer_text = """
+<div style="text-align: center;">
+    <p>Submitted by:</p>
+    <h3>Arnante, Diana</h3>
+    <h3>Besa, Kelsey Eunice</h3>
+    <h3>Estallo, Joshua</h3>
+    <p>BSCS 3A</p>
+</div>
+"""
+
+# Add the footer to the sidebar
+st.sidebar.markdown(footer_text, unsafe_allow_html=True)
+
+# Rest of your Streamlit app code...
 
 if __name__ == "__main__":
     main()
